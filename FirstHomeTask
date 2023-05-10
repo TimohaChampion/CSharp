@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FirstDz
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // task 1
+            Console.WriteLine("1. Введите число в диапазоне от 1 до 100");
+            var value = int.Parse(Console.ReadLine());
+            if (value < 1 || value > 100) Console.WriteLine("Error");
+            else if (value % 3 == 0 && value % 5 == 0) Console.WriteLine("Fizz Buzz");
+            else if (value % 3 == 0) Console.WriteLine("Fizz");
+            else if (value % 5 == 0) Console.WriteLine("Buzz");
+            else Console.WriteLine(value);
+
+            // task 2
+            Console.WriteLine("2. Введите два числа");
+            var a = int.Parse(Console.ReadLine());
+            var b = int.Parse(Console.ReadLine());
+            var answ = b * a / 100;
+            Console.WriteLine(answ);
+
+            // task 3
+            Console.WriteLine("7. Введите два числа");
+            var val1 = int.Parse(Console.ReadLine());
+            var val2 = int.Parse(Console.ReadLine());
+            if (val1 > val2) (val1, val2) = (val2, val1);
+            for(var i = val1; i <= val2; ++i)
+            {
+                if(i%2==0) Console.WriteLine(i);
+            }
+        }
+    }
+}
